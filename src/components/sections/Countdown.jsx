@@ -1,7 +1,10 @@
 import 'react';
-import { FadeInSection } from '../FadeInSection';
+import { FadeInSection } from '../FadeInSection'; 
+import { useCountdown } from '../../hooks/useCountdown'; 
+export function Countdown({ targetDate }) {
+  // El contador ahora maneja su propio estado de forma aislada
+  const timeLeft = useCountdown(targetDate);
 
-export function Countdown({ timeLeft }) {
   return (
     <FadeInSection className="w-full mt-6 flex flex-col items-center z-10">
       <div className="flex items-center gap-2 mb-3">
