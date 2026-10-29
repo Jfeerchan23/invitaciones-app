@@ -36,28 +36,12 @@ export default function App() {
 
   return (
     <div className="bg-[#04132b] text-[#d7e2ff] flex flex-col min-h-screen selection:bg-[#cbd5e1] selection:text-[#0f172a]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      {/* Fuentes y Símbolos de Google */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
-
+      <AudioPlayer isPlaying={isPlaying} onToggle={() => setIsPlaying(!isPlaying)} />
       <HeroSection />
-      {/* <QuincePortrait /> */}
-      <PhotoCarousel/>
+      <Countdown timeLeft={timeLeft} />
+      <PhotoCarousel />
       <ParentsBlessing />
       <CeremonyAndReception />
-      {/* Contenido Principal */}
-{/*       <main className="flex flex-col relative w-full pt-16 pb-28 bg-[#04132b] min-h-screen">
-        <div className="flex flex-col w-full text-[#d7e2ff]">
-          <div className="relative w-full max-w-[680px] mx-auto px-4 flex flex-col items-center">
-
-            <AudioPlayer isPlaying={isPlaying} onToggle={() => setIsPlaying(!isPlaying)} />
-            <EventDate />
-            <ParentsBlessing />
-            <Countdown timeLeft={timeLeft} />
-
-          </div>
-        </div>
-      </main> */}
     </div>
   );
 }
