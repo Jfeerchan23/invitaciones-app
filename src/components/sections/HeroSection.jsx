@@ -3,8 +3,11 @@ import { FadeInSection } from '../FadeInSection';
 
 export function HeroSection() {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-      <FadeInSection className="flex flex-col items-center justify-center z-10 max-w-lg mx-auto">
+    <section className="w-full min-h-screen min-h-dvh flex flex-col items-center justify-center text-center px-6 pb-10 relative overflow-hidden">
+      <FadeInSection
+        immediate
+        className="w-full flex flex-col items-center justify-center z-10 max-w-lg mx-auto"
+      >
 
         {/* Texto superior: "Mis" */}
         <span

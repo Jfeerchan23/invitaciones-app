@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <div
-      className="bg-[#04132b] text-[#d7e2ff] flex flex-col min-h-screen selection:bg-[#cbd5e1] selection:text-[#0f172a]"
+      className="bg-[#04132b] text-[#d7e2ff] flex flex-col min-h-screen min-h-dvh selection:bg-[#cbd5e1] selection:text-[#0f172a]"
       style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
     >
       <AudioPlayer
@@ -23,8 +23,9 @@ export default function App() {
         onToggle={() => setIsPlaying(!isPlaying)}
       />
 
+      <HeroSection />
+
       <main className="w-full flex-1 px-4 sm:px-6 md:px-8 pb-16 sm:pb-24">
-        <HeroSection />
         <Countdown targetDate={GALA_DATE} />
         <PhotoCarousel />
         <ParentsBlessing />
