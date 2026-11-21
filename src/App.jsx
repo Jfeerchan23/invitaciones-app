@@ -4,9 +4,11 @@ import { Countdown } from './components/sections/Countdown';
 import { PhotoCarousel } from './components/sections/PhotoCarousel';
 import { ParentsBlessing } from './components/sections/ParentsBlessing';
 import { CeremonyAndReception } from './components/sections/CeremonyAndReception';
+import { RsvpSection } from './components/sections/RsvpSection';
 import { AudioPlayer } from './components/sections/AudioPlayer';
 
 const GALA_DATE = '2027-05-29T19:00:00';
+const RSVP_WHATSAPP = import.meta.env.VITE_WHATSAPP_NUMBER ?? '';
 
 export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -27,6 +29,7 @@ export default function App() {
         <PhotoCarousel />
         <ParentsBlessing />
         <CeremonyAndReception />
+        <RsvpSection whatsappNumber={RSVP_WHATSAPP} />
       </main>
     </div>
   );
